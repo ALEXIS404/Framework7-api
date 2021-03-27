@@ -7,16 +7,6 @@ use Bulk\Database;
 $db = new Database();
 
 // GET - POST - AJAX
-<<<<<<< HEAD
-$correo = @$_GET['correo'];
-$password = @$_GET['password'];
-
-if ($correo && $password) {
-    $sql = "INSERT INTO usuarios (correo, password) VALUES (:correo, :password)";
-    //creamos un procedimiento que ejecuta el SQL con los valors 
-    //el parametro correo es un texto plano
-    // el parametro password es la contrasena inscriptada 
-=======
 $correo = $_GET['correo'];
 $password = $_GET['password'];
 
@@ -32,7 +22,6 @@ if ($correo && $password) {
     // Creamos un procedimiento que ejecuta el SQL con los valores de un arreglo
     // el parámetro correo es un texto plano
     // El parámetro password es la contraseña encriptada
->>>>>>> 6beea39f933549cf4e63862de27de188e9d2231f
     $stmt = $db->prepare_execute($sql, [
         'correo' => $correo,
         'password' => password_hash($password, PASSWORD_DEFAULT)
