@@ -26,17 +26,6 @@ if ($correo && $password) {
         'correo' => $correo,
         'password' => password_hash($password, PASSWORD_DEFAULT)
     ]);
-<<<<<<< HEAD
-
-    //se envia una respuesta en formato json
-    $json = [];
-    if ($stmt) {
-        $json['ingreso'] = true; // verdadero si es correcto  
-    } else {
-        $json['ingreso'] = false; //falso si falla 
-    }
-    // se imprime el resultado
-=======
     // Se enviá una respuesta en formato json
     $json = [];
     if ($stmt) {
@@ -45,7 +34,6 @@ if ($correo && $password) {
         $json['ingreso'] = false; // Falso si falla
     }
     // Se imprime el resultado
->>>>>>> 6beea39f933549cf4e63862de27de188e9d2231f
     echo json_encode($json);
 } else {
     $json = [];
